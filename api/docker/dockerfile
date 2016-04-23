@@ -1,0 +1,31 @@
+FROM ubuntu
+MAINTAINER Eduardo Hattori <eduardo.hattori@hotmail.com>
+
+RUN apt-get update \	
+	&& apt-get install -y build-essential \
+  	&& apt-get install -y unzip \
+  	&& apt-get install -y curl  \
+  	&& apt-get install -y nano  \
+
+#Install NodeJS
+RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -  	
+RUN apt-get install --yes nodejs
+
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
+#Install npm
+RUN apt-get install -y npm
+
+#Install mocha
+RUN npm install mocha -g
+
+ENV NODE_ENV="development"
+
+WORKDIR /home
+RUN mkdir cafeapp_api
+
+WORKDIR /home/cafeapp_api
+
+EXPOSE 3000
+
+

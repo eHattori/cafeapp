@@ -1,0 +1,27 @@
+{
+  "name": "caffeapp_api",
+  "version": "1.0.0",
+  "description": "API for test performance of CaffeAPP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eHattori/cafeapp.git"
+  },
+  "author": "Eduardo Hattori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eHattori/cafeapp/issues"
+  },
+  "homepage": "https://github.com/eHattori/cafeapp#readme",
+  "dependencies": {
+    "consign": "^0.1.2",
+    "express": "^4.13.4",
+    "should": "~8.3.1",
+    "supertest": "~1.2.0",
+    "mongoose": "~4.4.13",
+    "body-parser": "~1.15.0"
+  }
+}
