@@ -1,0 +1,44 @@
+<!--Btn Use coffee-->
+<section id="gerenciador">
+    <div *ngIf="count == 0" class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Gerenciador</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-2">
+                <p>Ajude-nos a gerenciar de forma inteligente nosso cafézinho, se tiver consumido este prazer carnal clica no botão abaixo e ajude-nos.</p>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <button class="btn btn-lg btn-success" (click)="sendCoffee()">
+                    <i class="fa fa-plus"></i> CAFÉ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div  *ngIf="count > 0" class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Gerenciador</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2>{{count}} cafés consumidos!!!</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <button class="btn btn-lg btn-success" (click)="sendCoffee()">
+                    <i class="fa fa-plus"></i> CAFÉ
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>

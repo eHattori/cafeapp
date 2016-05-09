@@ -1,11 +1,13 @@
 //Initialize the express framework
 var express    = require('express'),
  	consign    = require('consign'),
+	cors	   = require('cors'),
  	bodyParser = require('body-parser');
 
 
 var app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -19,9 +21,9 @@ consign()
 /**
 	Start the server
 */
-// app.listen(3000, function(){
-// 	console.log("API CafeAPP in the air");
-// });
+ app.listen(8000, function(){
+ 	console.log("API CafeAPP in the air");
+ });
 
 module.exports = app;
 

@@ -1,0 +1,28 @@
+<div *ngFor='#question of data; #count = index'>
+    <div class="jumbotron" *ngIf="question.status!='INACTIVE' && question.status!='COMPLETE'" >
+        <h2>Question {{count + 1}} - {{time}} <span class="glyphicon glyphicon-time" aria-hidden="true"></span></h2>
+        <p class="lead">{{question.question}}</p>
+        <p><button class="btn btn-lg btn-success" href="#"  (click)="play(count + 1)" role="button"><span class="glyphicon glyphicon-volume-up" aria-hidden="true" ></span> Listen Again</button></p>
+        <audio style="display: none;" autoplay="true" controls="controls" id="elemAudio{{count+1}}">
+            <source src="{{question.audio}}" type="audio/mp3" />
+            seu navegador não suporta HTML5
+        </audio>
+
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" (blur)="hasValidAnswer(awnser, question)" #awnser  placeholder="Awnser" aria-describedby="sizing-addon1">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-pencil" aria-hidden="true" ></span></span>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <p class="col-md-4" *ngIf="question.status=='OK'" ><button class="btn btn-lg btn-success" href="#"  (click)="nextQuestion()" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true" ></span> Continue</button></p>
+        </div>
+    </div>
+</div>
+
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+    </div>
+</div>
+
+
