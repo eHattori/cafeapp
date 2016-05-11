@@ -9,17 +9,18 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>CafeAPP - Gerenciando o Cafézinho o dia-a-dia</title>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<title>CafeAPP - Gerenciando o Cafézinho do dia-a-dia</title>
 
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom CSS -->
 	<link href="css/freelancer.css" rel="stylesheet">
+
+	<!-- Load libraries -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 
 	<!-- Custom Fonts -->
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,6 +33,7 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
 
 </head>
 
@@ -89,28 +91,6 @@
 	</div>
 </header>
 
-<!-- Btn Use coffee -->
-<!--<section id="gerenciador">-->
-	<!--<div class="container">-->
-		<!--<div class="row">-->
-			<!--<div class="col-lg-12 text-center">-->
-				<!--<h2>Gerenciador</h2>-->
-				<!--<hr class="star-primary">-->
-			<!--</div>-->
-		<!--</div>-->
-		<!--<div class="row">-->
-			<!--<div class="col-lg-4 col-lg-offset-2">-->
-				<!--<p>Ajude-nos a gerenciar de forma inteligente nosso cafézinho, se tiver consumido este prazer carnal clica no botão abaixo e ajude-nos.</p>-->
-			<!--</div>-->
-			<!--<div class="col-lg-8 col-lg-offset-2 text-center">-->
-				<!--<a href="#" class="btn btn-lg btn-success">-->
-					<!--<i class="fa fa-plus"></i> CAFÉ-->
-				<!--</a>-->
-			<!--</div>-->
-		<!--</div>-->
-	<!--</div>-->
-<!--</section>-->
-
 <section id="gerenciador"></section>
 
 <!-- About Section -->
@@ -139,7 +119,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="footer-col col-md-4">
-					<h3>Obrigado :) </h3> Projeto no GitHub: <a href="https://github.com/eHattori/cafeapp">https://github.com/eHattori/cafeapp">https://github.com/eHattori/cafeapp">https://github.com/eHattori/cafeapp</a>
+					<h3>Obrigado :) </h3> Projeto no GitHub: <a href:"https://github.com/eHattori/cafeapp">https://github.com/eHattori/cafeapp</a>
 					<ul class="list-inline">
 						<li>
 							<a href="https://www.facebook.com/eduardohattori" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
@@ -197,8 +177,6 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/freelancer.js"></script>
 
-<script src="scripts/formCoffee.js"></script>
-
+<script  type="text/babel" src="scripts/formCoffee.js"></script>
 </body>
-
 </html>
