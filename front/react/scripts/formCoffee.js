@@ -42,9 +42,11 @@ var CoffeeApp = React.createClass({
                     headers: { 'Content-Type' :  'application/json' }
                 })
             .done(function(data){
-                self.loadListUsers(function(){
-                    self.setState({ showResults: true });
-                });
+                setInterval(() => {
+                    self.loadListUsers(function(){
+                        self.setState({ showResults: true });
+                    });
+                }, 1000);
             });
     },
 
